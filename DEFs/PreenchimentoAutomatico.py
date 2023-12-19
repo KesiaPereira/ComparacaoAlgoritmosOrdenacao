@@ -1,6 +1,5 @@
 import random
 
-
 class PreencherAleatorio:
     gerador_aleatorio = random.Random()
 

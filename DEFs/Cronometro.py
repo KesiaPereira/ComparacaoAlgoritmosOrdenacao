@@ -1,6 +1,5 @@
 import time
 
-
 class Cronometro:
     def __init__(self):
         self.tempo_inicial = 0
