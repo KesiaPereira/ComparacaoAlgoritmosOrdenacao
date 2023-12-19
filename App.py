@@ -1,10 +1,10 @@
-from DEFs.PreenchimentoAutomatico import PreencherAleatorio
-from DEFs.Cronometro import Cronometro
-from DEFs.AlgoritmosOrdenacao import AlgoritmosOrdenacao
+from DEFs.preenchimento_automatico import PreencherAleatorio
+from DEFs.cronometro import Cronometro
+from DEFs.algoritmos_ordenacao import AlgoritmosOrdenacao
 
 def main():
     PreenchimentoAutomatico = PreencherAleatorio()
-    Cronometro = Cronometro()
+    cronometro = Cronometro()
     AlgoritmosOrdenacao = AlgoritmosOrdenacao()
 
     tamanho_lista = 30000
@@ -13,40 +13,40 @@ def main():
 
     print(f"\n***** Lista de {len(lista)} elementos *****")
 
-    Cronometro.iniciar()
+    cronometro.iniciar()
     AlgoritmosOrdenacao.bubble_sort(lista)
-    tempo_duracao = Cronometro.parar()
-    print(f"\n--> Ordenada em {Cronometro.obter_tempo(tempo_duracao)} usando o Bubble Sort")
+    tempo_duracao = cronometro.parar()
+    print(f"\n--> Ordenada em {cronometro.obter_tempo(tempo_duracao)} usando o Bubble Sort")
     lista = lista_aux
 
-    Cronometro.iniciar()
+    cronometro.iniciar()
     AlgoritmosOrdenacao.selection_sort(lista)
-    tempo_duracao = Cronometro.parar()
-    print(f"\n--> Ordenada em {Cronometro.obter_tempo(tempo_duracao)} usando o Selection Sort")
+    tempo_duracao = cronometro.parar()
+    print(f"\n--> Ordenada em {cronometro.obter_tempo(tempo_duracao)} usando o Selection Sort")
     lista = lista_aux
 
-    Cronometro.iniciar()
+    cronometro.iniciar()
     AlgoritmosOrdenacao.insertion_sort(lista)
-    tempo_duracao = Cronometro.parar()
-    print(f"\n--> Ordenada em {Cronometro.obter_tempo(tempo_duracao)} usando o Insertion Sort")
+    tempo_duracao = cronometro.parar()
+    print(f"\n--> Ordenada em {cronometro.obter_tempo(tempo_duracao)} usando o Insertion Sort")
     lista = lista_aux
 
-    Cronometro.iniciar()
+    cronometro.iniciar()
     AlgoritmosOrdenacao.merge_sort(lista)
-    tempo_duracao = Cronometro.parar()
-    print(f"\n--> Ordenada em {Cronometro.obter_tempo(tempo_duracao)} usando o Merge Sort")
+    tempo_duracao = cronometro.parar()
+    print(f"\n--> Ordenada em {cronometro.obter_tempo(tempo_duracao)} usando o Merge Sort")
     lista = lista_aux
 
-    Cronometro.iniciar()
+    cronometro.iniciar()
     AlgoritmosOrdenacao.quick_sort(lista)
-    tempo_duracao = Cronometro.parar()
-    print(f"\n--> Ordenada em {Cronometro.obter_tempo(tempo_duracao)} usando o Quick Sort")
+    tempo_duracao = cronometro.parar()
+    print(f"\n--> Ordenada em {cronometro.obter_tempo(tempo_duracao)} usando o Quick Sort")
     lista = lista_aux
 
-    Cronometro.iniciar()
+    cronometro.iniciar()
     AlgoritmosOrdenacao.counting_sort(lista)
-    tempo_duracao = Cronometro.parar()
-    print(f"\n--> Ordenada em {Cronometro.obter_tempo(tempo_duracao)} usando o Counting Sort")
+    tempo_duracao = cronometro.parar()
+    print(f"\n--> Ordenada em {cronometro.obter_tempo(tempo_duracao)} usando o Counting Sort")
     lista = lista_aux
 
 if __name__ == "__main__":
