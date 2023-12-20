@@ -87,18 +87,18 @@ class AlgoritmosOrdenacao:
     @staticmethod
     def quick_sort(lista):
         pilha = [(0, len(lista) - 1)]
-    
+
         while pilha:
             inicio, fim = pilha.pop()
-    
+
             indice_pivo = AlgoritmosOrdenacao.particionar(lista, inicio, fim)
-    
+
             if (indice_pivo - 1) > inicio:
                 pilha.append((inicio, indice_pivo - 1))
-    
+
             if (indice_pivo + 1) < fim:
                 pilha.append((indice_pivo + 1, fim))
-    
+
         return lista
 
     @staticmethod
@@ -117,7 +117,6 @@ class AlgoritmosOrdenacao:
 
     @staticmethod
     def counting_sort(lista):
-        tamanho = len(lista)
         maior_valor = max(lista)
 
         lista_auxiliar = [0] * (maior_valor + 1)
@@ -125,12 +124,10 @@ class AlgoritmosOrdenacao:
         for elemento in lista:
             lista_auxiliar[elemento] += 1
 
-        indice_lista = 0
-
+        lista_organziada = []
         for i in range(len(lista_auxiliar)):
             while lista_auxiliar[i] > 0:
-                lista[indice_lista] = i
-                indice_lista += 1
+                lista_organziada.append(i)
                 lista_auxiliar[i] -= 1
 
-        return lista
+        return lista_organziada
