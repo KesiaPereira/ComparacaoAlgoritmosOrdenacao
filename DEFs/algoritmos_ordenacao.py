@@ -78,34 +78,15 @@ class AlgoritmosOrdenacao:
 
     @staticmethod
     def quick_sort(lista):
-        pilha = [(0, len(lista) - 1)]
+        tamanho = len(lista)
+        if tamanho <= 1:
+            return lista
+        
+        pivo = lista[-1]
+        esquerda = [x for x in lista[:-1] if x < pivo]
+        direita = [x for x in lista[:-1] if x >= pivo]
 
-        while pilha:
-            inicio, fim = pilha.pop()
-
-            indice_pivo = AlgoritmosOrdenacao.particionar(lista, inicio, fim)
-
-            if (indice_pivo - 1) > inicio:
-                pilha.append((inicio, indice_pivo - 1))
-
-            if (indice_pivo + 1) < fim:
-                pilha.append((indice_pivo + 1, fim))
-
-        return lista
-
-    @staticmethod
-    def particionar(lista, inicio, fim):
-        pivo = lista[fim]
-        indice_pivo = inicio - 1
-
-        for indice_atual in range(inicio, fim):
-            if lista[indice_atual] <= pivo:
-                indice_pivo += 1
-                lista[indice_pivo], lista[indice_atual] = lista[indice_atual], lista[indice_pivo]
-
-        lista[indice_pivo + 1], lista[fim] = lista[fim], lista[indice_pivo + 1]
-
-        return indice_pivo + 1
+        return AlgoritmosOrdenacao.quick_sort(esquerda) + [pivo] + AlgoritmosOrdenacao.quick_sort(direita)
 
     @staticmethod
     def counting_sort(lista):
