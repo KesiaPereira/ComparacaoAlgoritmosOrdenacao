@@ -87,17 +87,19 @@ class AlgoritmosOrdenacao:
     @staticmethod
     def quick_sort(lista):
         pilha = [(0, len(lista) - 1)]
-
+    
         while pilha:
             inicio, fim = pilha.pop()
-
+    
             indice_pivo = AlgoritmosOrdenacao.particionar(lista, inicio, fim)
-
+    
             if (indice_pivo - 1) > inicio:
                 pilha.append((inicio, indice_pivo - 1))
-
+    
             if (indice_pivo + 1) < fim:
                 pilha.append((indice_pivo + 1, fim))
+    
+        return lista
 
     @staticmethod
     def particionar(lista, inicio, fim):
