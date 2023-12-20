@@ -82,9 +82,14 @@ class AlgoritmosOrdenacao:
         if tamanho <= 1:
             return lista
         
-        pivo = lista[-1]
-        esquerda = [x for x in lista[:-1] if x < pivo]
-        direita = [x for x in lista[:-1] if x >= pivo]
+        pivo = lista[tamanho - 1]
+        esquerda = []
+        direita = []
+        for i in range (tamanho - 1):
+            if lista[i] < pivo:
+                esquerda.append(lista[i])
+            else:
+                direita.append(lista[i])
 
         return AlgoritmosOrdenacao.quick_sort(esquerda) + [pivo] + AlgoritmosOrdenacao.quick_sort(direita)
 
