@@ -8,11 +8,14 @@ class Cronometro:
         self.tempo_inicial = time.time()
 
     def parar(self):
-        tempo_decorrido = int((time.time() - self.tempo_inicial) * 1000)
-        self.tempo_inicial = 0
-        return tempo_decorrido
+        if self.tempo_inicial is not None:
+            tempo_decorrido = int((time.time() - self.tempo_inicial) * 1000)
+            self.tempo_inicial = None
+            return tempo_decorrido
+        else:
+            return 0
     
-    def obter_tempo(self, milissegundos):
+    def formatar_tempo(self, milissegundos):
         horas = int(milissegundos / (1000 * 60 * 60))
         minutos = int((milissegundos % (1000 * 60 * 60)) / (1000 * 60))
         segundos = int((milissegundos % (1000 * 60)) / 1000)
