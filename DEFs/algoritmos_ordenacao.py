@@ -45,44 +45,36 @@ class AlgoritmosOrdenacao:
     def merge_sort(lista):
         tamanho = len(lista)
 
-        if tamanho < 2:
+        if tamanho <= 1:
             return lista
 
         meio = tamanho // 2
 
-        lista_esquerda = AlgoritmosOrdenacao.merge_sort(lista[:meio])
-        lista_direita = AlgoritmosOrdenacao.merge_sort(lista[meio:])
+        esquerda = lista[:meio]
+        direita = lista[meio:]
 
-        AlgoritmosOrdenacao.merge(lista, lista_esquerda, lista_direita)
-
-        return lista
+        return AlgoritmosOrdenacao.merge(AlgoritmosOrdenacao.merge_sort(esquerda), AlgoritmosOrdenacao.merge_sort(direita))
 
     @staticmethod
-    def merge(lista, lista_esquerda, lista_direita):
-        tamanho_lista_esquerda = len(lista_esquerda)
-        tamanho_lista_direita = len(lista_direita)
+    def merge(esquerda, direita):
+        lista_ordenada = []
+        tamanho_esquerda = len(esquerda)
+        tamanho_direita = len(direita)
 
-        indice_lista_esquerda = indice_lista_direita = indice_lista = 0
+        indice_esquerda = indice_direita = 0
 
-        while indice_lista_esquerda < tamanho_lista_esquerda and indice_lista_direita < tamanho_lista_direita:
-            if lista_esquerda[indice_lista_esquerda] <= lista_direita[indice_lista_direita]:
-                lista[indice_lista] = lista_esquerda[indice_lista_esquerda]
-                indice_lista_esquerda += 1
+        while indice_esquerda < tamanho_esquerda and indice_direita < tamanho_direita:
+            if esquerda[indice_esquerda] < direita[indice_direita]:
+                lista_ordenada.append(esquerda[indice_esquerda])
+                indice_esquerda += 1
             else:
-                lista[indice_lista] = lista_direita[indice_lista_direita]
-                indice_lista_direita += 1
+                lista_ordenada.append(direita[indice_direita])
+                indice_direita += 1
 
-            indice_lista += 1
+        lista_ordenada.extend(esquerda[indice_esquerda:])
+        lista_ordenada.extend(direita[indice_direita:])
 
-        while indice_lista_esquerda < tamanho_lista_esquerda:
-            lista[indice_lista] = lista_esquerda[indice_lista_esquerda]
-            indice_lista_esquerda += 1
-            indice_lista += 1
-
-        while indice_lista_direita < tamanho_lista_direita:
-            lista[indice_lista] = lista_direita[indice_lista_direita]
-            indice_lista_direita += 1
-            indice_lista += 1
+        return lista_ordenada
 
     @staticmethod
     def quick_sort(lista):
@@ -124,10 +116,10 @@ class AlgoritmosOrdenacao:
         for elemento in lista:
             lista_auxiliar[elemento] += 1
 
-        lista_organziada = []
+        lista_ordenada = []
         for i in range(len(lista_auxiliar)):
             while lista_auxiliar[i] > 0:
-                lista_organziada.append(i)
+                lista_ordenada.append(i)
                 lista_auxiliar[i] -= 1
 
-        return lista_organziada
+        return lista_ordenada
