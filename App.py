@@ -8,7 +8,7 @@ def main():
     algoritmos_ordenacao = AlgoritmosOrdenacao()
 
     #tamanhos = [100, 500, 1000, 30000, 80000, 100000, 150000, 200000]
-    tamanho_lista = 30000 #Alterar o valor conforme o nescessário.
+    tamanho_lista = 100 #Alterar o valor conforme o nescessário.
     lista = preenchimento_automatico.criar_lista(tamanho_lista)
     
     lista_auxiliar1 = lista.copy()
