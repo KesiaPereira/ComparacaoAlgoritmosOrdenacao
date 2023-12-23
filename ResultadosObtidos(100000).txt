@@ -1,0 +1,13 @@
+***** Lista de 100000 elementos *****
+
+--> Ordenada em 00:16:08.902 usando o Bubble Sort
+
+--> Ordenada em 00:06:45.503 usando o Selection Sort
+
+--> Ordenada em 00:07:19.720 usando o Insertion Sort
+
+--> Ordenada em 00:00:00.432 usando o Merge Sort
+
+--> Ordenada em 00:00:08.483 usando o Quick Sort
+
+--> Ordenada em 00:00:00.041 usando o Counting Sort

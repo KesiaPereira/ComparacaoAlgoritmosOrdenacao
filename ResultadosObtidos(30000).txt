@@ -1,0 +1,43 @@
+***** Lista de 30000 elementos *****
+
+TENTATIVA 1
+
+--> Ordenada em 00:01:22.858 usando o Bubble Sort
+
+--> Ordenada em 00:00:38.032 usando o Selection Sort
+
+--> Ordenada em 00:00:38.051 usando o Insertion Sort
+
+--> Ordenada em 00:00:00.139 usando o Merge Sort
+
+--> Ordenada em 00:00:00.715 usando o Quick Sort
+
+--> Ordenada em 00:00:00.013 usando o Counting Sort
+
+TENTATIVA 2
+
+--> Ordenada em 00:01:22.241 usando o Bubble Sort
+
+--> Ordenada em 00:00:43.086 usando o Selection Sort
+
+--> Ordenada em 00:00:35.647 usando o Insertion Sort
+
+--> Ordenada em 00:00:00.088 usando o Merge Sort
+
+--> Ordenada em 00:00:00.552 usando o Quick Sort
+
+--> Ordenada em 00:00:00.007 usando o Counting Sort
+
+TENTATIVA 3
+
+--> Ordenada em 00:01:22.780 usando o Bubble Sort
+
+--> Ordenada em 00:00:35.913 usando o Selection Sort
+
+--> Ordenada em 00:00:39.411 usando o Insertion Sort
+
+--> Ordenada em 00:00:00.166 usando o Merge Sort
+
+--> Ordenada em 00:00:00.682 usando o Quick Sort
+
+--> Ordenada em 00:00:00.019 usando o Counting Sort

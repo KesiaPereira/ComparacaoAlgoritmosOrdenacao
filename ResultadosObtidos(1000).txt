@@ -1,0 +1,43 @@
+***** Lista de 1000 elementos *****
+
+TENTATIVA 1
+
+--> Ordenada em 00:00:00.092 usando o Bubble Sort
+
+--> Ordenada em 00:00:00.046 usando o Selection Sort
+
+--> Ordenada em 00:00:00.050 usando o Insertion Sort
+
+--> Ordenada em 00:00:00.006 usando o Merge Sort
+
+--> Ordenada em 00:00:00.006 usando o Quick Sort
+
+--> Ordenada em 00:00:00.000 usando o Counting Sort
+
+TENTATIVA 2
+
+--> Ordenada em 00:00:00.086 usando o Bubble Sort
+
+--> Ordenada em 00:00:00.038 usando o Selection Sort
+
+--> Ordenada em 00:00:00.047 usando o Insertion Sort
+
+--> Ordenada em 00:00:00.000 usando o Merge Sort
+
+--> Ordenada em 00:00:00.003 usando o Quick Sort
+
+--> Ordenada em 00:00:00.002 usando o Counting Sort
+
+TENTATIVA 3
+
+--> Ordenada em 00:00:00.250 usando o Bubble Sort
+
+--> Ordenada em 00:00:00.091 usando o Selection Sort
+
+--> Ordenada em 00:00:00.054 usando o Insertion Sort
+
+--> Ordenada em 00:00:00.004 usando o Merge Sort
+
+--> Ordenada em 00:00:00.002 usando o Quick Sort
+
+--> Ordenada em 00:00:00.003 usando o Counting Sort
